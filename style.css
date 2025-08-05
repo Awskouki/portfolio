@@ -1,0 +1,474 @@
+/* === Minecraft Theme Base === */
+
+/* ---------------------------
+   Font Import
+---------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* ---------------------------
+   General Base Layout
+---------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.my-website {
+  background-color: #2e4b1e;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: #e0d9b8;
+  font-family: 'Press Start 2P', monospace, Helvetica, sans-serif;
+  user-select: none;
+  letter-spacing: 1.5px;
+  text-shadow: 1px 1px 0 #000000cc, 2px 2px 0 #000000cc;
+  overflow: hidden;
+}
+
+.my-website .div {
+  background-color: #7a623a;
+  width: 1440px;
+  height: 100dvh;
+  position: relative;
+  border: 6px solid #52422e;
+  box-shadow: inset 0 0 10px #a27b4c;
+  overflow: hidden;
+}
+
+/* ---------------------------
+   Decorative Wave Block
+---------------------------- */
+.rectangle {
+  background: linear-gradient(45deg, #3b6e22 0%, #1c3d0a 100%);
+  border: 4px solid #5a8a27;
+  box-shadow: inset 4px 4px 0 #6bb931, inset -4px -4px 0 #2d4a0c;
+  position: absolute;
+  bottom: 0;
+  width: 1440px;
+  height: 150px;
+  clip-path: polygon(
+    0% 15%, 10% 10%, 20% 18%, 30% 10%, 40% 20%, 50% 15%, 
+    60% 25%, 70% 15%, 80% 23%, 90% 10%, 100% 15%, 100% 100%, 0% 100%
+  );
+  animation: floatWave 6s ease-in-out infinite;
+}
+
+@keyframes floatWave {
+  0%, 100% { transform: translateY(0) rotate(0.2deg); }
+  50% { transform: translateY(-12px) rotate(-0.2deg); }
+}
+
+/* ---------------------------
+   Inner Blocks
+---------------------------- */
+.rectangle-2 {
+  background-color: #616161;
+  border: 3px solid #444444;
+  box-shadow: inset 3px 3px 0 #757575, inset -3px -3px 0 #373737;
+  height: 630px;
+  width: 878px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.85);
+}
+
+.rectangle-3 {
+  background-color: #3d3d3d;
+  box-shadow: inset 0 -4px 4px #2a2a2a;
+  height: 91px;
+  width: 878px;
+  position: absolute;
+  top: calc(44.5% - 315px * 0.85);
+  left: 50%;
+  transform: translateX(-50%) scale(0.85);
+}
+
+/* ---------------------------
+   Typography
+---------------------------- */
+.hi-i-m-awes {
+  font-size: 40px;
+  font-weight: 700;
+  color: #b5c46b;
+  text-shadow: 2px 2px 0 #000;
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.p {
+  font-size: 14px;
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  text-align: center;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.text-wrapper { 
+  font-size: 20px;
+  font-weight: 700;
+  position: absolute;
+  top: 120px;
+  left: 30%;
+  transform: translateX(-50%);
+  color: #fbfbfb;
+}
+
+.text-wrapper-2,
+.text-wrapper-3,
+.text-wrapper-4 {
+  font-size: 14px;
+  font-weight: 700;
+  position: absolute;
+  top: 500px;
+  text-align: center;
+  white-space: nowrap;
+  color: #ffffff;
+}
+.text-wrapper-2 { left: 30%; }
+.text-wrapper-3 { left: 46.5%; }
+.text-wrapper-4 { left: 61.5%; }
+
+.text-wrapper-7 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #a4b25f;
+  text-shadow: 1px 1px 0 #000;
+  position: absolute;
+  top: 735px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ---------------------------
+   Icons & Buttons
+---------------------------- */
+.about,
+.folder,
+.email {
+  cursor: pointer;
+  image-rendering: pixelated;
+  width: 80px;
+  height: 60px;
+  position: absolute;
+  top: 400px;
+}
+
+.about  { left: 30%; }
+.folder { left: 46%; }
+.email  { left: 62%; }
+
+.top-left-icons {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 20px;
+  left: 55px;
+  display: flex;
+  gap: 15px;
+  z-index: 2000;
+    cursor: pointer;
+
+}
+
+.mask-group,
+.dark-mode-toggle {
+  width: 40px;
+  height: 40px;
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------
+   Social Icons
+---------------------------- */
+.socials {
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  image-rendering: pixelated;
+  transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.1);
+}
+
+/* ---------------------------
+   Floating Cat Borders
+---------------------------- */
+.cat-icon {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  width: 150px;
+  height: auto;
+  cursor: pointer;
+  z-index: 1000;
+  animation: floatMove 4s ease-in-out infinite alternate;
+  user-select: none;
+}
+
+@keyframes floatMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
+/* ---------------------------
+   Popup Base Styles (Shared)
+---------------------------- */
+.about-popup,
+.Folder-popup,
+.email-popup {
+  position: absolute;
+  width: 400px;
+  background-color: #a4b25f;
+  border: 3px solid #526420;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #3c4f1a;
+  padding: 25px;
+  display: none;
+  cursor: move;
+  font-family: 'Press Start 2P', monospace, sans-serif;
+  color: #1c2b0a;
+  text-shadow: none;
+  transform: scale(0.85);
+}
+
+/* ---------------------------
+   Card Content Styling
+---------------------------- */
+.about-card,
+.Folder-card,
+.email-card {
+  background-color: #7b8b43;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: inset 3px 3px 5px #a4b25f, inset -3px -3px 5px #526420;
+  animation: fadeIn 0.25s ease;
+  text-align: center;
+}
+
+.about-card img,
+.Folder-card img,
+.email-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  image-rendering: pixelated;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-card h3,
+.Folder-card h3,
+.email-card h3 {
+  font-size: 14px;
+  color: #1c2b0a;
+  margin-bottom: 10px;
+}
+
+.about-card p,
+.Folder-card p,
+.email-card p {
+  font-size: 11px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-height: 160px;
+  overflow-y: auto;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---------------------------
+   Popup Position Wrappers
+---------------------------- */
+.about-wrapper { top: 419px; left: 507px; z-index: 3000; position: absolute; }
+.Folder-wrapper { top: 419px; left: 700px; z-index: 3000; position: absolute; }
+.email-wrapper { top: 419px; left: 890px; z-index: 3000; position: absolute; }
+
+/* ---------------------------
+   Dark Mode
+---------------------------- */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark-mode .my-website,
+body.dark-mode .my-website .div {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+body.dark-mode .rectangle-2 {
+  background-color: #2a2a2a;
+  border-color: #444444;
+}
+
+body.dark-mode .hi-i-m-awes,
+body.dark-mode .p,
+body.dark-mode .text-wrapper,
+body.dark-mode .text-wrapper-2,
+body.dark-mode .text-wrapper-3,
+body.dark-mode .text-wrapper-4,
+body.dark-mode .text-wrapper-7 {
+  color: #e0e0e0;
+}
+
+body.dark-mode .hi-i-m-awes {
+  color: #a4b25f;
+}
+
+body.dark-mode a,
+body.dark-mode .folder:hover,
+body.dark-mode .about:hover,
+body.dark-mode .email:hover {
+  color: #fafafa;
+}
+
+body.dark-mode .dark-mode-toggle,
+body.dark-mode .mask-group {
+  border-color: #7b8b43;
+}
+
+/* ---------------------------
+   cat Icon
+---------------------------- */
+.frog-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 120px;
+  height: auto;
+  image-rendering: pixelated;
+  cursor: pointer 
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  color: #1c2b0a;
+  background-color: #a4b25f;
+  border: 2px solid #526420;
+  padding: 5px 10px;
+  cursor: pointer;
+  box-shadow: inset 2px 2px 0 #cde57a, inset -2px -2px 0 #526420;
+  text-shadow: none;
+  transition: transform 0.1s ease, background-color 0.2s;
+  z-index: 100;
+}
+
+.close-btn:hover {
+  background-color: #cde57a;
+  transform: scale(1.05);
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.skill-box {
+  background-color: #282c34;
+  color: #a4b25f;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #a4b25f;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+  background-color: #a4b25f;
+  color: #282c34;
+}
+/* Base state for animation */
+.skill-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Add animation delay to each skill using nth-child */
+.skills-grid .skill-box:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.skills-grid .skill-box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.skills-grid .skill-box:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.skills-grid .skill-box:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.skills-grid .skill-box:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.skills-grid .skill-box:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.skills-grid .skill-box:nth-child(7) {
+  animation-delay: 0.7s;
+}
+.skills-grid .skill-box:nth-child(8) {
+  animation-delay: 0.8s;
+}
+/* Prevent animation unless popup is active */
+.skills-grid:not(.show-skills) .skill-box {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: none;
+}
