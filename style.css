@@ -489,7 +489,7 @@ body.dark-mode .mask-group {
   .rectangle-3 {
     width: 0;
     height: auto;
-    left: 100%;
+    left: 1000%;
     transform: translateX(-50%);
   }
 
@@ -641,3 +641,4 @@ body.dark-mode .mask-group {
     padding: 8px;
   }
 }
+
